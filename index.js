@@ -4,7 +4,7 @@ class ApplicationManager {
   constructor (token) {
     this.token = token
   }
-  
+
   apiRequest (method, path, body = {}) {
     return new Promise((resolve, reject) => {
       superagent[method](`https://discordapp.com/api/v6/oauth2/applications${path?'/'+path:''}`)
@@ -16,16 +16,22 @@ class ApplicationManager {
       });
     })
   }
-  
+
   getApp(appID) {
     return this.apiRequest('get', appID)
   }
-  
+
   createApp(details) {
     return this.apiRequest('post', '', details)
   }
-  
+
   editApp(appID, details) {
     return this.apiRequest('put', appID, details)
   }
+
+  deleteApp(appID) {
+    return this.apiRequest('delete', appID)
+  }
 }
+
+module.exports = ApplicationManager
