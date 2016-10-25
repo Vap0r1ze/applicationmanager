@@ -105,7 +105,7 @@ apps.createBotUser(app)
 | :--- | :--- | :--- |
 | app | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) \| [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) | The client ID of the application you wish to turn into a [Bot User](https://blog.discordapp.com/the-robot-revolution-has-unofficially-begun/), or the details of the [Bot User](https://blog.discordapp.com/the-robot-revolution-has-unofficially-begun/) you wish to create |
 
-##### Returns {[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)>}
+##### Returns {[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[App Object](https://github.com/Vap0r1ze/applicationmanager/blob/master/README.md#application-object)>}
 
 
 
