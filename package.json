@@ -1,0 +1,24 @@
+{
+  "name": "applicationmanager",
+  "version": "1.0.0",
+  "description": "An application manager for Discord.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vap0r1ze/applicationmanager.git"
+  },
+  "keywords": [
+    "discord",
+    "discordapp"
+  ],
+  "author": "Vap0r1ze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vap0r1ze/applicationmanager/issues"
+  },
+  "homepage": "https://github.com/vap0r1ze/applicationmanager#readme",
+  "readme": "# Application Manager\n> ! This only works with user accounts !\n\n---\n\nFirst, you must create an instance of the module by doing this:\n```js\nconst AppManager = require('applicationmanager')\nconst token = 'USER TOKEN'\nconst apps = new AppManager(token)\n```\n\n---\n\n### getApp\n\n```js\napps.getApp(appID)\n```\n| Parameter | Type | Description |\n| :---: | :---: | :---: |\n| appID | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | The client ID of the application |\n\n##### Returns {[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)>}\n\n---\n\n### createApp\n\n```js\napps.createApp(details)\n```\n| Parameter | Type | Description |\n| :---: | :---: | :---: |\n| details | [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) | An object with the application's details |\n| details.name | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | The name of the application |\n| details.description | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) \\| undefined | The application's description |\n\n##### Returns {[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)>}\n\n---\n\n### editApp\n\n```js\napps.editApp(appID, details)\n```\n| Parameter | Type | Description |\n| :---: | :---: | :---: |\n| appID | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | The client ID of the application you wish to edit |\n| details | [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) \\| undefined | An object with the details of the application you wish to edit |\n| details.name | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) \\| undefined | The name of the application |\n| details.description | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) \\| undefined | The application's description |\n\n##### Returns {[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)>}\n\n---\n\n### deleteApp\n\n```js\napps.deleteApp(appID)\n```\n| Parameter | Type | Description |\n| :---: | :---: | :---: |\n| appID | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | The client ID of the application you wish to delete |\n\n##### Returns {[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)>}"
+}
