@@ -37,8 +37,17 @@ class ApplicationManager {
     return this.apiRequest('delete', `/${appID}`)
   }
 
-  createBotUser(appID) {
-    return this.apiRequest('post', `/${appID}/bot`)
+  createBotUser (appID = {}) {
+    if (appID instanceof String) return this.apiRequest('post', `/${appID}/bot`)
+    else return new Promise((resolve, reject) => {
+      this.createApp(appID)
+      .then(app => {
+        this.createBotUser(app.id)
+        .then(resolve)
+        .catch(reject)
+      })
+      .catch(reject)
+    })
   }
 }
 
