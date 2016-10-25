@@ -22,7 +22,7 @@ class ApplicationManager {
   }
 
   getApp (appID) {
-    return this.apiRequest('get', appID)
+    return this.apiRequest('get', `/${appID}`)
   }
 
   createApp (details) {
