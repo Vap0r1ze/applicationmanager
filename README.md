@@ -1,5 +1,6 @@
 # Discord App Manager
-> ! This only works with user accounts !
+
+## This only works with user accounts!
 
 ---
 
@@ -18,6 +19,7 @@ const apps = new AppManager(token)
 apps.getApps()
 ```
 
+
 ##### Returns {[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)<[App Object](https://github.com/Vap0r1ze/applicationmanager/blob/master/README.md#application-object)>>}
 
 ---
@@ -27,8 +29,9 @@ apps.getApps()
 ```js
 apps.getApp(appID)
 ```
+
 | Parameter | Type | Description |
-| :---: | :---: | :---: |
+| :--- | :--- | :--- |
 | appID | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | The client ID of the application |
 
 ##### Returns {[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[App Object](https://github.com/Vap0r1ze/applicationmanager/blob/master/README.md#application-object)>}
@@ -40,8 +43,9 @@ apps.getApp(appID)
 ```js
 apps.createApp(details)
 ```
+
 | Parameter | Type | Description |
-| :---: | :---: | :---: |
+| :--- | :--- | :--- |
 | details | [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) | An object with the application's details |
 | details.name | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | The name of the application |
 | details.description | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) \| undefined | The application's description |
@@ -60,8 +64,9 @@ apps.createApp(details)
 ```js
 apps.editApp(appID, details)
 ```
+
 | Parameter | Type | Description |
-| :---: | :---: | :---: |
+| :--- | :--- | :--- |
 | appID | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | The client ID of the application you wish to edit |
 | details | [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) \| undefined | An object with the details of the application you wish to edit |
 | details.name | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | The name of the application |
@@ -81,8 +86,9 @@ apps.editApp(appID, details)
 ```js
 apps.deleteApp(appID)
 ```
+
 | Parameter | Type | Description |
-| :---: | :---: | :---: |
+| :--- | :--- | :--- |
 | appID | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | The client ID of the application you wish to delete |
 
 ##### Returns {[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<null>}
@@ -94,8 +100,9 @@ apps.deleteApp(appID)
 ```js
 apps.createBotUser(appID)
 ```
+
 | Parameter | Type | Description |
-| :---: | :---: | :---: |
+| :--- | :--- | :--- |
 | appID | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | The client ID of the application you wish to turn into a [Bot User](https://blog.discordapp.com/the-robot-revolution-has-unofficially-begun/) |
 
 ##### Returns {[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)<[Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)>}
@@ -108,7 +115,7 @@ apps.createBotUser(appID)
 
 ### Application Object
 | Field | Type | Description |
-| :---: | :---: | :---: |
+| :--- | :--- | :--- |
 | redirect_uris | [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) | An array of redirect URIs for the application |
 | description | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | The description of the application |
 | rpc_origins | [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) | An array of RPC Origins for the application |
@@ -120,7 +127,7 @@ apps.createBotUser(appID)
 | id | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | The client ID of the application |
 | icon | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) \| null | A hash of the application's icon |
 
-> \* *This is only available if the application is a bot user*
+> \* **This is only available if the application is a bot user**
 
 
 
@@ -131,7 +138,7 @@ apps.createBotUser(appID)
 ### Bot Object
 
 | Field | Type | Description |
-| :---: | :---: | :---: |
+| :--- | :--- | :--- |
 | username | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | The username of the bot user |
 | bot | [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) | This should always be true unless you have a userbot somehow |
 | token | [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) | The auth token for api calls with the bot user |
