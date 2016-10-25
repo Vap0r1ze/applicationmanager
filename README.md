@@ -1,4 +1,4 @@
-# Application Manager
+# Discord App Manager
 > ! This only works with user accounts !
 
 ---
