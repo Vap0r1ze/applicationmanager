@@ -5,7 +5,7 @@
 
 First, you must create an instance of the module by doing this:
 ```js
-const AppManager = require('applicationmanager')
+const AppManager = require('discord-app-manager')
 const token = 'USER TOKEN'
 const apps = new AppManager(token)
 ```
